@@ -1,0 +1,9 @@
+.sideBanner{
+    width:300px;
+    height:1050px;
+    background-image: url(./Banner.png);
+    margin-top:75px;
+    float:left;
+    background-repeat: no-repeat;
+}
+
