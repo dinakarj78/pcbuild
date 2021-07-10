@@ -15,6 +15,7 @@ import './cardstyling.css'
 
 class  ProcessorProducts extends React.Component{
    constructor(){
+      this.state={i:0}
       super();
    }
    render(){
@@ -27,8 +28,10 @@ return (
          <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
             <Typography className="price" >{item.price.formatted_with_symbol}</Typography>
                <CardActions className="addtoCart" >
-                  <IconButton aria-label="add  to cart" color="secondary" onClick={()=>{  let productId=[];
-                        productId.push(item.id);
+                  <IconButton aria-label="add  to cart" color="secondary" onClick={()=>{  
+                     this.setState={i:i++}
+                     let productId=[];
+                        productId.push(i,item.id);
                         console.log(productId);}} >
                      <AddShoppingCartRoundedIcon />
                   </IconButton>
@@ -44,7 +47,6 @@ return (
   )
 }
 }
-
 function addToCart(id){
    let productid=[];
    productid.push(id);
